@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Formulario clasico</title>
+		<meta charset="UTF-8">
+	<style>
+		fieldset {border: 1px dashed grey; }
+		body h1 {
+			width: 50%;
+			margin: auto;
+		}
+	</style>
+
+	<script>
+		function alina1(){ }
+	</script>
+	</head>
+	<body>
+	 <h1>Formulario de controles clasicos</h1>
+	<form id="form">
+	<fieldset>
+		<legend>Cajas de texto</legend>
+		<p>
+			Campo de texto: <input type="text" name="txt_ejemplo" placeholder="puedes colocar texto aqui" />
+		</p>
+		<p>
+			<label>Área de texto:</label>
+			<textarea id="txt_ejemplo" rows="4" cols="60">Puedes colocar texto multilinea</textarea>
+		</p>
+		<p>
+			<label>contraseña</label>
+			<input type="password" name="psw_ejemplo" value="contraseña" />
+		</p>
+	</fieldset>
+
+	<fieldset>
+		<legend>Controles de seleccion</legend>
+		<p> Lista de seleccion simple (tipo combo):
+			<select name="mascota1">
+				<option>Perro</option>
+				<option selected>Gato</option>
+				<option>Roedor</option>
+			</select>
+						Lista deseleccion simple:
+			<select name="mascota2" size="3">
+				<option>Perro</option>
+				<option>Gato</option>
+				<option>Roedor</option>
+				<option>Lobo</option>
+				<option>Leon</option>
+				<option>Foca</option>
+			</select>
+			<br>
+			<br>
+			<br>
+
+			Lista de seleccion multiple, puede seleccionar varios ctrol+opcion
+			<select name="mascota3" size="3" multiple="">
+				<option>Perro</option>
+				<option>Gato</option>
+				<option>Roedor</option>
+				<option>Lobo</option>
+				<option selected>Leon</option>
+				<option>Foca</option>
+			</select>
+		</p>
+
+		<p>				Lista de botones de radio:
+			<input type="radio" id="perro" name="tipo_mascota" value="1" /> <label for="perro">Perro</label>
+			<input type="radio" id="gato" name="tipo_mascota" value="1" /> <label for="gato">Gato</label>
+			<input type="radio" id="roedor" name="tipo_mascota" value="1" /> <label for="roedor">Roedor</label>
+		</p>
+		<p><label>Lista de cajas (checkbox): </label>
+			<input type="checkbox" id="chico" name="tam_chico" value="1" /> <label for="chico">Chico</label>
+			<input type="checkbox" id="mediano" name="tam_mediano" value="1" /> <label for="mediano">Mediano</label>
+			<input type="checkbox" id="grande" name="tam_grande" value="1" /> <label for="grande">Grande</label>
+		</p>
+	</fieldset>
+
+	<fieldset>
+		<legend>Botones</legend>
+		<p>
+			<input type="sumit" id="envia" value="Enviar informacion" />
+			<input type="rest" id="borra" value="Borrar informacion" />
+			<input type="botton" id="boton" value="Boton" />
+		</p>
+	</fieldset>
+
+	<fieldset>
+		<legend>Otros</legend>
+		<label>Imagen con la etiqueta imput type="image"</label>
+		<input type="image" width="20" height="20" id="imagen" src="castillo.gif" alt="imagen como botón" />
+		<br/>
+		<label>Aqui otro control oculto (tipo hidden) con name="oculto" solo esta disponible para el programador</label>
+		<input type="hidden" id="oculto" name="oculto" value="Clave Secreta" />
+	</fieldset>
+
+	</form>
+
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			margin: auto;
+			width: 50%;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" name="genera una tabla" onclick="genera_tabla()">
+	<script>
+		function genera_tabla() {
+			// Obteener la referencia del elemento body
+			var body = document.getElementsByTagName("body")[0];
+
+			// Crea un elemento <table> y un elemento <tbody>
+			var tabla = document.createElement("table");
+			var tblBody = document.createElement("tbody");
+
+
+			for(var k=0; k < 8 ; k++){
+				var hilera = document.createElement("th");
+				var celda = document.createElement("td");
+				var textoCelda = document.createTextNode("Columna:"+k);
+				celda.appendChild(textoCelda);
+				hilera.appendChild(celda);	
+				tblBody.appendChild(hilera);			
+			}
+
+
+			/* Seccion del tbody */
+			// Crea las celdas
+			for (var i = 0; i < 8; i++) {
+				// Crea las hileras de la tabla
+				var hilera = document.createElement("tr");
+
+				for (var j=0; j<8; j++){
+					// Crea un elemento <tb> y un nodo de texto, haz que el nodo de
+					// texto sea el contenido de <td>, ubica el elemento <td> al final 
+					// de la hilera de la tabla
+					var celda = document.createElement("td");
+					var textoCelda = document.createTextNode(i+"," +j);
+					celda.appendChild(textoCelda);
+					hilera.appendChild(celda);
+				}
+				// agrega la hilera al final de la tabla (al final del elemento tblbody)
+				tblBody.appendChild(hilera);
+			}
+
+			// posiciona el <tbody> debajo del elemento <table>
+			tabla.appendChild(tblBody);
+			// appends <table> into <body>
+			body.appendChild(tabla);
+			// modifica el atributo "border" de la tabla y lo fija a "2";
+			tabla.setAttribute("border", "2"); 
+		}
+	</script>
+</body>
+</html>

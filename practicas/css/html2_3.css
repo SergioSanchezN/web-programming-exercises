@@ -1,0 +1,18 @@
+nav{
+	margin-right: 30%;
+	margin-top: 2%;
+	right: 10%;
+	border: 3px solid blue;
+}
+
+#wrap {
+	margin-top: 1%;
+	border: 3px solid green;
+}
+
+p{
+	margin-top: 1%;
+	border: 3px solid navy;
+	font-size: 2em;
+	width: 50%;
+}

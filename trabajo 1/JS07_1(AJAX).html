@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		body {
+			margin: auto;
+			width: 50%;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<h3>Use the XMLHttpRequest to conseguir el contenido del archivo json_demo.txt en el servidor</h3>
+	<h4>El contenido debe estar escrito en formato JSON y debe ser convertido a Objeto de JS en el cliente</h4>
+
+	<p id="demo"></p>
+	<script>
+		function muestre01(){
+			alert ("Ejercicio: implementer este ejemplo usando el hosting asignado usando un arreglo de frutas y un arreglo de verduras en formato JSON")
+		}
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				var myObj = JSON.parse(this.responseText);
+				document.getElementById("demo").innerHTML = myObj.name;
+			}
+		}
+		xmlhttp.open("GET", "json_demo.txt", true);
+		xmlhttp.send();
+	</script>
+
+	<p>para que se proyecte el archivo: primro grabarlo en el servidor (hosting asignado)<a href="json_demo.txt" target="_blank">json_demo.txt</a></p>
+	<button onclick="muestre01()">Ejercicio</button>
+</body>
+</html>
